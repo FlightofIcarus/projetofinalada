@@ -1,0 +1,22 @@
+{
+  "name": "investcalc",
+  "version": "1.0.0",
+  "description": "Este projeto consiste em uma aplicação que permite calcular o retorno sobre investimento com base em um valor investido e um período de tempo. A aplicação é dividida em três partes principais: Frontend, API e BFF (Back for Front).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "express",
+    "node",
+    "javascript",
+    "typescript",
+    "jest",
+    "tdd",
+    "calculadora",
+    "bff",
+    "api"
+  ],
+  "author": "Icaro",
+  "license": "ISC"
+}
