@@ -2,9 +2,9 @@
   "name": "investcalc",
   "version": "1.0.0",
   "description": "Este projeto consiste em uma aplicação que permite calcular o retorno sobre investimento com base em um valor investido e um período de tempo. A aplicação é dividida em três partes principais: Frontend, API e BFF (Back for Front).",
-  "main": "index.js",
+  "main": "src/app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "ts-node src/app.ts"
   },
   "keywords": [
     "express",
@@ -18,5 +18,16 @@
     "api"
   ],
   "author": "Icaro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.11.27",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.2"
+  }
 }
