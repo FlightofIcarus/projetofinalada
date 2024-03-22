@@ -6,11 +6,10 @@ export function calcular(valor: number, dias: number, taxa: number): number {
     for (let i = 0; i < meses; i++) {
         valorTotal = valorTotal + (valorTotal * taxa)
     }
-
+    
     //para garantir que o resultado tenha apenas duas casas decimais.
     const valorTotalFormatado = Number (valorTotal.toFixed(2))
 
-    //console.log(valorTotalFormatado);
    // return parseFloat(valorTotalFormatado);
    return valorTotalFormatado;
 }

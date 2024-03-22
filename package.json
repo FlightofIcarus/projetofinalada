@@ -4,7 +4,9 @@
   "description": "Este projeto consiste em uma aplicação que permite calcular o retorno sobre investimento com base em um valor investido e um período de tempo. A aplicação é dividida em três partes principais: Frontend, API e BFF (Back for Front).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node src/app.ts",
+    "test": "jest",
+    "build": "tsc --build"
   },
   "keywords": [
     "express",
@@ -22,7 +24,13 @@
   "dependencies": {
     "express": "^4.18.3"
   },
-  "dev-dependencies": {
-    "jest": "^29.7.0"
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@babel/preset-env": "^7.24.0",
+    "@babel/preset-typescript": "^7.23.3",
+    "@types/jest": "^29.5.12",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
   }
 }
