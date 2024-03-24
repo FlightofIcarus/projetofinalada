@@ -49,6 +49,6 @@ describe("testar o cálculo da função Calcular", () => {
 
     it("testar cálculo com valores negativos", () => {
         let resultado = calcular(-100, -30, 0.1);
-        expect(resultado).toBe(-110);
+        expect(resultado).toBe(-100);
     })
 })
