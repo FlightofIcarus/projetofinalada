@@ -3,10 +3,17 @@
     <h1>Calculadora de Dividendos</h1>
     <form action="/calcular-dividendos" method="post">
         <label for="investimento">Valor:</label>
-        <input type="number" id="investimento" name="investimento" required>
+        <input type="number" id="investimento" name="valor" required>
         <br>
         <label for="dias">Dias investidos:</label>
         <input type="number" id="dias" name="dias" required>
+        <br>
+        <label for="taxa">Taxa:</label>
+        <select id="taxa" name="taxa">
+            <option value="0.88">Selic</option>
+            <option value="0.83">IPCA</option>
+            <option value="1">CDI</option>
+        </select>
         <br>
         <button type="submit">Calcular</button>
     </form>
