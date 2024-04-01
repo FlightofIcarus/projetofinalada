@@ -36,3 +36,4 @@
 20 - Criar de entrypoint
 21 - Criar teste para no mínimo camada de service da API
 22 - Criar teste para requisição do BFF
+23 - Criar teste cases (Cenários de teste)
