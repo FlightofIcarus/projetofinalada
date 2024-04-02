@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Dividendos</title>
+  <link rel="stylesheet" href="./Public/style.css">
+</head>
+<body>
+ 
+    <div class="calculator-container">
+
+        <h1>Calculadora de Dividendos</h1>
+        <form method="post">
+            <label>Valor:
+                <input type="number" id="investimento" name="valor" required>
+            </label>
+            <br>
+            <label>Dias investidos:
+                <input type="number" id="dias" name="dias" required>
+            </label>
+            <br>
+            <label>Taxa:
+                <select id="taxa" name="taxa">
+                    <option value="0.88">Selic</option>
+                    <option value="0.83">IPCA</option>
+                    <option value="1">CDI</option>
+                </select>
+            </label>    
+            <br>
+            <button type="button" onclick="exibirResultado()">Calcular</button>
+        </form>
+    </div>
+    <script>
+        async function exibirResultado(){
+    event.preventDefault();
+    const inputValor = document.getElementById("investimento").value;
+    const inputDias = document.getElementById("dias").value;
+    const inputTaxa = document.getElementById("taxa").value;
+
+    const valores = { inputValor, inputDias, inputTaxa };
+
+    try {
+        const response = await fetch("http://localhost:9000/product-register", {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(valores)     
+        });
+
+        if (response.ok) {
+            const responseData = await response.json();
+            console.log('Resposta:', responseData);
+        } else {
+            console.error(response);
+        }
+    } catch (error) {
+        console.error('Erro ao fazer requisição:', error);
+    }
+}
+
+    </script>
+</body>
+</html>
