@@ -11,7 +11,7 @@
     <div class="calculator-container">
 
         <h1>Calculadora de Dividendos</h1>
-        <form method="post">
+        <form id="calcForm">
             <label>Valor:
                 <input type="number" id="investimento" name="valor" required>
             </label>
@@ -30,37 +30,8 @@
             <br>
             <button type="button" onclick="exibirResultado()">Calcular</button>
         </form>
+        <div id="resultado"></div>
     </div>
-    <script>
-        async function exibirResultado(){
-    event.preventDefault();
-    const inputValor = document.getElementById("investimento").value;
-    const inputDias = document.getElementById("dias").value;
-    const inputTaxa = document.getElementById("taxa").value;
-
-    const valores = { inputValor, inputDias, inputTaxa };
-
-    try {
-        const response = await fetch("http://localhost:9000/product-register", {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(valores)     
-        });
-
-        if (response.ok) {
-            const responseData = await response.json();
-            console.log('Resposta:', responseData);
-        } else {
-            console.error(response);
-        }
-    } catch (error) {
-        console.error('Erro ao fazer requisição:', error);
-    }
-}
-
-    </script>
+    <script src="./Public/scripts.js"></script>
 </body>
 </html>
