@@ -1,14 +1,14 @@
 #Test cases
 
 ### 1 - Testar o funcionamento da função calcularDividendo de acordo com os inputs no campo valor
-   x 01 - Testar funcionamento recebendo string
-   x 02 - Testar funcionamento recebendo number
-   x 03 - Testar funcionamento recebendo caracteres especiais
-   x 04 - Testar funcionamento recebendo objeto
-   x 05 - Testar funcionamento recebendo null
-   x 06 - Testar funcionamento recebendo number negativo
-   x 07 - Testar funcionamento recebendo lista de numbers
-   x 08 - Testar funcionamento recebendo lista de strings
+    01 - Testar funcionamento recebendo string
+    02 - Testar funcionamento recebendo number
+    03 - Testar funcionamento recebendo caracteres especiais
+    04 - Testar funcionamento recebendo objeto
+    05 - Testar funcionamento recebendo null
+    06 - Testar funcionamento recebendo number negativo
+    07 - Testar funcionamento recebendo lista de numbers
+    08 - Testar funcionamento recebendo lista de strings
     09 - Testar funcionamento recebendo string vazia
     10 - Testar funcionamento recebendo undefined
     11 - Testar funcionamento recebendo string em branco(Só espaço)
