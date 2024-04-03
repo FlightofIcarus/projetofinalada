@@ -1,5 +1,9 @@
 export function calcular(valor: number, meses: number, taxa: number): object {
 
+    if (typeof valor !== 'number' && typeof meses !== 'number' && typeof taxa !== 'number'){
+        throw new Error('Um ou mais valores não são válidos! Insira apenas números')
+    } else {
+
     const rate = (valor:number , meses:number, taxa: number) => {
         return valor * ((1 + taxa) ** meses);
     }
@@ -16,6 +20,8 @@ export function calcular(valor: number, meses: number, taxa: number): object {
     }
 
     return resultado;
+
+}
   /*  const meses = Math.floor(meses / 30);
 
     let valorTotal = valor;

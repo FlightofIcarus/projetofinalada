@@ -1,3 +1,4 @@
+import { log } from 'console';
 import  {calcular}  from '../../build/services/calcular';
 
 // primeiro case suite
@@ -10,6 +11,8 @@ describe("Testar o funcionamento da função calcular, de acordo com os inputs",
     it("testar funcionamento recebendo três strings", () => {
         expect(() => calcular("zero" as string, "um" as string, "dois" as string)).toThrow();
     });
+
+    
 
     it("testar funcionamento com um valor válido e dois valores inválidos", () => {
         const resultado = calcular(100, "trinta", "zeroDotOne")
