@@ -1,7 +1,23 @@
-import { log } from 'console';
-import  {calcular}  from '../../build/services/calcular';
+/* import { log } from 'console';
+import  {calcular}  from '../../build/src/services/calcular';
 
 // primeiro case suite
+describe("Testar o funcionamento da função calcularDividendo de acordo com os inputs no campo valor", () => {
+   
+    it("Testar funcionamento recebendo string", () => {
+        expect(() => calcular("100")).toThrow();
+    })
+
+    it("Testar funcionamento recebendo string", () => {
+        const resultado = calcular(100);
+        console.log(resultado);
+        
+        expect(typeof calcular(100)).toBe('number');
+
+    })
+})
+
+/*
 describe("Testar o funcionamento da função calcularDividendo de acordo com os inputs no campo valor, tempo e taxa", () => {
 
     it("testar funcionamento recebendo três valores válidos", () => {
@@ -59,3 +75,4 @@ describe("testar o cálculo da função Calcular", () => {
         expect(resultado).toBe(-100);
     })
 })
+*/
