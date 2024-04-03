@@ -1,22 +1,68 @@
-/* import { log } from 'console';
+/*import { log } from 'console';
 import  {calcular}  from '../../build/src/services/calcular';
 
 // primeiro case suite
 describe("Testar o funcionamento da função calcularDividendo de acordo com os inputs no campo valor", () => {
    
     it("Testar funcionamento recebendo string", () => {
-        expect(() => calcular("100")).toThrow();
+        expect(() => calcular("100", 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
     })
 
-    it("Testar funcionamento recebendo string", () => {
-        const resultado = calcular(100);
-        console.log(resultado);
-        
-        expect(typeof calcular(100)).toBe('number');
-
+    it("Testar funcionamento recebendo number", () => {
+        const resultado = calcular(100, 30, 0.1);
+        expect(typeof resultado).toBe('object');
+        expect(typeof resultado.Montante).toBe('number');
+        expect(typeof resultado.Juros).toBe('number');
+        expect(typeof resultado.ROI).toBe('number');
     })
+
+    it("Testar funcionamento recebendo caracteres especiais", () => {
+        expect(() => calcular("@", 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    })
+    
+    it("Testar funcionamento recebendo objeto", () => {
+        const objeto = {valor: 100}
+        expect(() => calcular(objeto, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    })
+
+    it("Testar funcionamento recebendo null", () => {
+        expect(() => calcular(null, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    })
+
+    it("Testar funcionamento recebendo número negativo", () => {
+        expect(() => calcular(-100, 30, 0.1)).toThrowError('um ou mais valores são números negativos! Insira apenas valores positivos.');
+    })  
+
+    it("Testar funcionamento recebendo lista de números", () => {
+        const lista = [100, 30, 0.1]
+        expect(() => calcular(lista, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    }) 
+
+    it("Testar funcionamento recebendo lista de strings", () => {
+        const lista = ["100", "30", "0.1"]
+        expect(() => calcular(lista, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    }) 
+    
+    it("Testar funcionamento recebendo lista vazia", () => {
+        const lista = []
+        expect(() => calcular(lista, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    }) 
+
+    it("Testar funcionamento recebendo undefined", () => {
+        expect(() => calcular(undefined, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    })
+
+    it("Testar funcionamento recebendo string em branco(Só espaço)", () => {
+        const lista = [  ,   ,   ]
+        expect(() => calcular(lista, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    }) 
+
+    it("Testar funcionamento recebendo espaços vazios e números", () => {
+        const lista = [  ,30,0.1]
+        expect(() => calcular(lista, 30, 0.1)).toThrowError('Um ou mais valores não são válidos! Insira apenas números');
+    }) 
+
 })
-
 /*
 describe("Testar o funcionamento da função calcularDividendo de acordo com os inputs no campo valor, tempo e taxa", () => {
 

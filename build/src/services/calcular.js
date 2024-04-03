@@ -3,7 +3,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.calcular = void 0;
 function calcular(valor, meses, taxa) {
     if (typeof valor !== 'number' || typeof meses !== 'number' || typeof taxa !== 'number') {
-        throw new Error('Um ou mais valores não são válidos! Insira apenas números');
+        throw new Error('Um ou mais valores não são válidos! Insira apenas números.');
+    }
+    else if (valor < 0 || meses < 0 || taxa < 0) {
+        throw new Error('um ou mais valores são números negativos! Insira apenas valores positivos.');
     }
     else {
         const rate = (valor, meses, taxa) => {
