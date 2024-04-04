@@ -4,7 +4,7 @@
   "description": "Este projeto consiste em uma aplicação que permite calcular o retorno sobre investimento com base em um valor investido e um período de tempo. A aplicação é dividida em três partes principais: Frontend, API e BFF (Back for Front).",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./build/src/app.js",
+    "dev": "node ./build/app.js",
     "test": "jest",
     "build": "tsc --build"
   },
