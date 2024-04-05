@@ -1,17 +1,26 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.calcular = void 0;
-function calcular(valor, dias, taxa) {
-    const meses = Math.floor(dias / 30);
-    let valorTotal = valor;
-   
-    
-    for (let i = 0; i < meses; i++) {
-        valorTotal = valorTotal + (valorTotal * taxa);
+function calcular(valor, meses, taxa) {
+    if (typeof valor !== 'number' || typeof meses !== 'number' || typeof taxa !== 'number') {
+        throw new Error('Um ou mais valores não são válidos! Insira apenas números.');
     }
-    //para garantir que o resultado tenha apenas duas casas decimais.
-    const valorTotalFormatado = Number(valorTotal.toFixed(2));
-    // return parseFloat(valorTotalFormatado);
-    return valorTotalFormatado;
+    else if (valor < 0 || meses < 0 || taxa < 0) {
+        throw new Error('um ou mais valores são números negativos! Insira apenas valores positivos.');
+    }
+    else {
+        const rate = (valor, meses, taxa) => {
+            return valor * ((1 + taxa) ** meses);
+        };
+        const montante = Number(rate(Number(valor), Number(meses), Number(taxa)).toFixed(2));
+        const juros = Number((montante - Number(valor)).toFixed(2));
+        const ROI = ((montante - Number(valor)) / Number(valor)).toFixed(2);
+        const resultado = {
+            Juros: juros,
+            Montante: montante,
+            ROI: Number(ROI)
+        };
+        return resultado;
+    }
 }
 exports.calcular = calcular;
