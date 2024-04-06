@@ -47,7 +47,7 @@ Este projeto consiste em uma aplicação que permite calcular o retorno sobre in
 
 ## Como Executar
 
-1. Certifique-se de possuir instalado o [Node.js LTS](https://nodejs.org/pt-br/download/) (versão de suporte de longo prazo)
+1. Certifique-se de possuir instalado o [Node.js LTS](https://nodejs.org/en/download) à partir da v.18.0.0 (versão de suporte de longo prazo)
 
 ```sh
 winget install OpenJS.NodeJS.LTS
