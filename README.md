@@ -1,4 +1,9 @@
+![](https://ada-site-frontend.s3.sa-east-1.amazonaws.com/home/header-logo.svg)
+
 # Projeto de Cálculo de Retorno sobre Investimento
+
+Descrição
+---
 
 Este projeto consiste em uma aplicação que permite calcular o retorno sobre investimento com base em um valor investido e um período de tempo. A aplicação é dividida em três partes principais: Frontend, API e BFF (Back for Front).
 
@@ -42,6 +47,50 @@ Este projeto consiste em uma aplicação que permite calcular o retorno sobre in
 
 ## Como Executar
 
-As instruções sobre como executar o projeto serão fornecidas posteriormente.
+1. Certifique-se de possuir instalado o [Node.js LTS](https://nodejs.org/pt-br/download/) (versão de suporte de longo prazo)
 
-Este projeto visa fornecer uma solução para o cálculo de retorno sobre investimento, seguindo as boas práticas de desenvolvimento e os critérios de aceitação estabelecidos.
+```sh
+winget install OpenJS.NodeJS.LTS
+```
+2. Clone o repositório do BFF no link:
+
+```sh
+https://github.com/FlightofIcarus/bfffinal
+```
+
+3. Clone o repositório do Front no link:
+
+```sh
+https://github.com/FlightofIcarus/frontendprojfinal
+```
+
+4. Abra os 03 repositórios em um workspace no Visual Studio Code.
+
+5. Abra os 03 repositórios no terminal integrado do VSCode e use o comando a seguir para instalar as dependências necessárias para a inicialização do projeto:
+
+```sh
+npm install
+```
+
+6. Use o comando a seguir para iniciar os servidores da API e do BFF:
+
+```sh
+npm run dev
+```
+
+7. Usando a extenção Live Server execute o arquivo HTML do Front.
+
+
+## 🤖 Nossa Squad
+
+### Wilson Rocha
+- LinkedIn: [Wilson Rocha](https://www.linkedin.com/in/wilsonn-rocha/)
+- GitHub: [Sownatta](https://github.com/Sownatta)
+
+### Ícaro Santos
+- LinkedIn: [Ícaro Santos](https://www.linkedin.com/in/santos-icaro/)
+- Github: [Ícaro Santos](https://github.com/FlightofIcarus)
+
+### Patrick Souza
+- LinkedIn: [Patrick Souza](https://www.linkedin.com/in/patrickpsouza/)
+- GitHub: [Patrick Souza](https://github.com/PatrickPSouza)
