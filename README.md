@@ -85,9 +85,10 @@ npm install
 PORT=5000
 ```
 
-8. No repositório do BFF, crie um arquivo `.env` com uma variável PORT que recebe o valor 8000:
+8. No repositório do BFF, crie um arquivo `.env` com essas duas variáveis:
 ```sh
 PORT=8000
+API_PATH=http://localhost:5000/api/investcalc
 ```
 
 9. Use o comando a seguir para iniciar os servidores da API e do BFF no modo de desenvolvimento:
