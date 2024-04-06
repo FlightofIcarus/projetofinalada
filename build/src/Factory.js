@@ -46,10 +46,6 @@ function Factory() {
     server.setRouter("/api/investcalc", testeRoute);
     const port = String(process.env.PORT);
     server.startServer(port);
-    function fazLog(req, res) {
-        console.log(`API InvestCalc on na porta ${port}`);
-        res.send("enviou!");
-    }
     return server;
 }
 const App = Factory();

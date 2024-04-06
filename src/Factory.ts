@@ -30,11 +30,8 @@ function Factory() {
     
     server.startServer(port);
 
-    function fazLog (req: Request, res: Response){
-    console.log(`API InvestCalc on na porta ${port}`);
-    res.send("enviou!")
-    
-}
+
+
 
     return server
 }
