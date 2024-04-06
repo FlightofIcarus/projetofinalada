@@ -74,7 +74,7 @@ https://github.com/FlightofIcarus/frontendprojfinal.git
 5. Abra os 03 repositórios em um workspace no Visual Studio Code.
 ---
 
-6. Abra os 03 repositórios no terminal integrado do VSCode e use o comando a seguir para instalar as dependências necessárias para a inicialização do projeto:
+6. Abra os repositórios do  BFF e da API no terminal integrado do VSCode e use o comando a seguir para instalar as dependências necessárias para a inicialização do projeto:
 
 ```sh
 npm install
