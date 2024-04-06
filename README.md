@@ -49,7 +49,6 @@ Este projeto consiste em uma aplicação que permite calcular o retorno sobre in
 
 1. Certifique-se de possuir instalado o [Node.js LTS](https://nodejs.org/en/download) à partir da v.18.0.0 (versão de suporte de longo prazo)
 
-
 2. Clone o repositório da API no link:
 
 ```sh
@@ -110,3 +109,4 @@ npm run dev
 ### Patrick Souza
 - LinkedIn: [Patrick Souza](https://www.linkedin.com/in/patrickpsouza/)
 - GitHub: [Patrick Souza](https://github.com/PatrickPSouza)
+
