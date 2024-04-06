@@ -1,25 +1,20 @@
 import { Request } from "express-serve-static-core";
+import { verificaMes } from "./calcServices";
+
+
 
 export class Service{
 
     calc(req: Request){
         const data = req.body;
-        const rate = (number:number , time:number, tax: number) => {
-            return number * ((1 + tax) ** time);
-        }
-        const montante = Number(rate(Number(data.valor), Number(data.tempo), Number(data.taxa)).toFixed(2));
+        
+        
+        const result = verificaMes(Number(data.valor), Number(data.tempo), Number(data.taxa));
 
         //valor * ((1 + 0,01)**tempo)
 
-        const juros = montante - Number(data.valor);
+       
 
-        const ROI = ((montante - Number(data.valor)) / Number(data.valor)).toFixed(2);
-
-        const result = {
-            Juros: juros,
-            Montante: montante,
-            ROI: Number(ROI)
-        }
 
         return result;
             
