@@ -8,7 +8,7 @@ export class CalcController{
 
     dividendCalculator = (req: Request, res: Response):void => {
         const response = this.service.calc(req);
-        console.log(response);        
+        res.setHeader('Content-Type', 'application/json');
         res.json(response);
     }
 
